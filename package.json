@@ -13,11 +13,11 @@
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
+    "lint": "eslint",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
-    "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
@@ -47,7 +47,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
+    "eslint": "^7.25.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-config-standard-react": "^9.2.0",
@@ -68,6 +68,13 @@
   },
   "files": [
     "dist"
+  ],
+  "eslintIgnore": [
+    "build/",
+    "dist/",
+    "node_modules/",
+    ".snapshots/",
+    "*.min.js"
   ],
   "dependencies": {}
 }
