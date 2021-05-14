@@ -69,12 +69,5 @@
   "files": [
     "dist"
   ],
-  "eslintIgnore": [
-    "build/",
-    "dist/",
-    "node_modules/",
-    ".snapshots/",
-    "*.min.js"
-  ],
   "dependencies": {}
 }
