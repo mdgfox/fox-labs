@@ -1,11 +1,20 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
+        "google",
         "plugin:react/recommended",
-        "google"
+        "plugin:jest/recommended"
+    ],
+    "plugins": [
+      "babel",
+      "import",
+      "react",
+      "prettier",
+      "@typescript-eslint"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -20,10 +29,6 @@
             "version": "16"
         }
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
     "rules": {
         "space-before-function-paren": 0,
         "react/prop-types": 0,
@@ -44,21 +49,15 @@
             "ignoreTemplateLiterals": true
           }
         ],
-        "comma-dangle": [
-          "error",
-          {
-            "arrays": "always",
-            "objects": "always",
-            "imports": "never",
-            "exports": "never",
-            "functions": "never"
-          }
-        ],
+        "comma-dangle": ["error", "always-multiline"],
         "semi": [
           "error",
           "always"
         ],
         "no-unused-vars": "off",
-        "import/export": 0
+        "import/export": 0,
+        "object-curly-spacing": ["error", "always"],
+        "valid-jsdoc": "off",
+        "linebreak-style": ["error", "windows"]
     }
 }
