@@ -11,8 +11,10 @@ export default {
 
 const Template: Story = (args) => (
     <div style={{ overflowX: 'clip' }}>
-        <div style={{ height: '68vh' }}>Here can be some page content!</div>
-        <FooterFire><p>{args.text}</p></FooterFire>
+        <div style={{ height: '68vh', backgroundColor: '#EED5D1', textAlign: 'center' }}>
+            <p style={{ paddingTop: 10 }}>Here can be some page content!</p>
+        </div>
+        <FooterFire><p style={{ textAlign: 'center' }}>{args.text}</p></FooterFire>
     </div>
 );
 
