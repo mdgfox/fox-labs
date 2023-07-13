@@ -17,8 +17,8 @@ const IconButtonWrapper: React.FC<Props> = ({ hoverStyles, link, children }) => 
     const styles = getStyles(hover, hoverStyles);
     return (
         <IconButton
-            onPointerOver={()=> setHover(true)}
-            onPointerOut={() => setHover(false)}
+            onPointerOver={(_e)=> setHover(true)}
+            onPointerOut={(_e) => setHover(false)}
             style={styles} to={link}
         >
             {children}
