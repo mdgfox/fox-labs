@@ -1,15 +1,15 @@
 import React, { useMemo } from 'react';
-import IconButtonWrapper from '../socialIconsPanels/IconButtonWrapper';
+import IconButtonWrapper from '../SocialPanel/IconButtonWrapper';
 import HomeIcon from './HomeIcon';
 import ChevronRightIcon from './ChevronRightIcon';
 import { Link } from '@mui/material';
 
-const Breadcrumbs: React.FC<{location: Location}> = ({ location }) => {
+export const Breadcrumbs: React.FC<{location: Location}> = ({ location }) => {
     const { pathname, href, origin } = location;
 
     const breadcrumbsLayout = useMemo(() => {
         return pathname.split('/').slice(1).map((pathPart) => {
-            const normalizedPathPart = pathPart.replace(/#|_|-|\./g, ' ');
+            const normalizedPathPart = pathPart.replace(/[#_\-.]/g, ' ');
             return (
                 <div key={'breadcrumbs-' + pathPart}>
                     <ChevronRightIcon/>
@@ -17,7 +17,7 @@ const Breadcrumbs: React.FC<{location: Location}> = ({ location }) => {
                         sx={{ 'textTransform': 'capitalize', 'color': 'black', ':hover': { 'color': '#D6517C' } }}
                         component="button"
                         underline="none"
-                        href={href + pathname.substr(0, pathname.indexOf(pathPart))}
+                        href={href + pathname.substring(0, pathname.indexOf(pathPart))}
                     >
                         {normalizedPathPart}
                     </Link>
@@ -33,5 +33,3 @@ const Breadcrumbs: React.FC<{location: Location}> = ({ location }) => {
         </span>
     );
 };
-
-export default Breadcrumbs;

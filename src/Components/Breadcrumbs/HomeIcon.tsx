@@ -7,5 +7,4 @@ const HomeIcon = (props: SvgIconProps) => (
     </SvgIcon>
 );
 
-
 export default HomeIcon;

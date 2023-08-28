@@ -7,5 +7,4 @@ const ChevronRightIcon = (props: SvgIconProps) => (
     </SvgIcon>
 );
 
-
 export default ChevronRightIcon;

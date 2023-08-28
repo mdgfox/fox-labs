@@ -4,6 +4,7 @@ import React, { CSSProperties, useState } from 'react';
 interface Props {
     hoverStyles: CSSProperties;
     link: string;
+    children?: React.ReactNode;
 }
 
 const getStyles = (hover: boolean, hoverStyles: CSSProperties): CSSProperties => ({
@@ -19,7 +20,7 @@ const IconButtonWrapper: React.FC<Props> = ({ hoverStyles, link, children }) => 
         <IconButton
             onPointerOver={(_e)=> setHover(true)}
             onPointerOut={(_e) => setHover(false)}
-            style={styles} to={link}
+            style={styles}
         >
             {children}
         </IconButton>

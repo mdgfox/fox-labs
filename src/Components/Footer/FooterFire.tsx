@@ -2,7 +2,11 @@ import React, { useMemo } from 'react';
 import './FooterStyles.css';
 import Bubble from './Bubble';
 
-const FooterFire: React.FC = ({ children }) => {
+interface Props {
+    children?: React.ReactNode;
+}
+
+const FooterFire: React.FC<Props> = ({ children }) => {
     const bubbles = useMemo(() => {
         const result = [];
         for (let i = 0; i < 96; i++) {
