@@ -1,0 +1,123 @@
+html,
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    background: #EED5D1;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: -10;
+  }
+  .arrows {
+      position: absolute;
+      display: flex;
+      width: 100px;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      top: 0;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 80, 0.05);
+      }
+      &.right {
+        right: 0;
+      }
+      &.left {
+        transform: rotate(180deg);
+      }
+    }
+    .inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+      .t-image {
+        width: 500px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          background: #D1114D;
+          left: 35px;
+          top: 0;
+          border-radius: 100%;
+          z-index: -9;
+        }
+        ul {
+          padding: 0;
+          list-style-type: none;
+          display: flex;
+          position: absolute;
+          overflow: hidden;
+          height: 460px;
+          width: 340px;
+          box-shadow: 0 0 40px rgba(0, 0, 10, 0.25);
+          li {
+            height: 460px;
+            width: 340px;
+            img {
+              height: 460px;
+              width: 340px;
+            }
+          }
+        }
+      }
+      .t-content {
+        width: 400px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        ul {
+          list-style-type: none;
+          position: absolute;
+          overflow: hidden;
+          width: 400px;
+          height: 400px;
+          li {
+            width: 400px;
+            height: 400px;
+            color: #252422;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            opacity: 0;
+            .content-inner {
+              width: 400px;
+              .quote {
+                font-size: 26px;
+                font-weight: 700;
+                margin-bottom: 16px;
+              }
+              .name {
+                font-size: 18px;
+                font-style: italic;
+                color: #252422;
+                font-weight: 600;
+              }
+              .title {
+                font-size: 18px;
+                color: #252422;
+              }
+            }
+          }
+        }
+      }
+    }
+}
