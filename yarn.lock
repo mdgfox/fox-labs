@@ -2545,7 +2545,7 @@
     lodash "^4.17.21"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-docs@7.3.2":
+"@storybook/addon-docs@7.3.2", "@storybook/addon-docs@^7.3.2":
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-7.3.2.tgz#170ffa8843cd0eb59e2df0f25f3abadc0ded780a"
   integrity sha512-g4B+gM7xzRvUeiUcijPyxwDG/LlgHrfQx1chzY7oiFIImGXyewZ+CtGCjhrSdJGhXSj/69oqoz26RQ1VhSlrXg==
