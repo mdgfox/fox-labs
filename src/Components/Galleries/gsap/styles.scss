@@ -3,6 +3,11 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+// disable tailwind
+.gallery-container * {
+  all: revert;
+}
+
 .gallery-container {
   display: flex;
   align-items: center;

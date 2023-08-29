@@ -26,7 +26,7 @@ export const GsapGallery: React.FC = () => {
 
 
     const nextSlide = () => {
-        if (imageListRef?.children[0].classList.contains('active')) {
+        if (imageListRef?.children[0].classList.contains('activeee')) {
             setActiveState({ isActive1: false, isActive2: true, isActive3: false });
 
             slideLeft(imageListRef.children[0]);
@@ -37,7 +37,7 @@ export const GsapGallery: React.FC = () => {
 
             fadeOut(contentListRef?.children[0]);
             fadeIn( contentListRef?.children[1]);
-        } else if (imageListRef?.children[1].classList.contains('active')) {
+        } else if (imageListRef?.children[1].classList.contains('activeee')) {
             setActiveState({ isActive1: false, isActive2: false, isActive3: true });
 
             slideRight(imageListRef.children[0]);
@@ -47,7 +47,7 @@ export const GsapGallery: React.FC = () => {
 
             fadeOut(contentListRef?.children[1]);
             fadeIn(contentListRef?.children[2]);
-        } else if (imageListRef?.children[2].classList.contains('active')) {
+        } else if (imageListRef?.children[2].classList.contains('activeee')) {
             setActiveState({ isActive1: true, isActive2: false, isActive3: false });
 
             slideLeft(imageListRef.children[2], 1, 3);
@@ -61,7 +61,7 @@ export const GsapGallery: React.FC = () => {
     };
 
     const prevSlide = () => {
-        if (imageListRef?.children[0].classList.contains('active')) {
+        if (imageListRef?.children[0].classList.contains('activeee')) {
             setActiveState({ isActive1: false, isActive2: false, isActive3: true });
 
             slideLeft(imageListRef.children[2], 0, 3);
@@ -72,7 +72,7 @@ export const GsapGallery: React.FC = () => {
 
             fadeOut(contentListRef?.children[0]);
             fadeIn(contentListRef?.children[2]);
-        } else if (imageListRef?.children[1].classList.contains('active')) {
+        } else if (imageListRef?.children[1].classList.contains('activeee')) {
             setActiveState({ isActive1: true, isActive2: false, isActive3: false });
 
             slideLeft(imageListRef.children[0], 0);
@@ -83,7 +83,7 @@ export const GsapGallery: React.FC = () => {
 
             fadeOut(contentListRef?.children[1]);
             fadeIn(contentListRef?.children[0]);
-        } else if (imageListRef?.children[2].classList.contains('active')) {
+        } else if (imageListRef?.children[2].classList.contains('activeee')) {
             setActiveState({ isActive1: false, isActive2: true, isActive3: false });
 
             slideLeft(imageListRef.children[2], 1);
@@ -104,34 +104,34 @@ export const GsapGallery: React.FC = () => {
             <div className='inner'>
                 <div className='t-image'>
                     <ul ref={(el) => (imageListRef = el)}>
-                        <li className={activeState.isActive1 ? "image0 active" : ""}>
-                            <img src={`${require(`../../../../common/profileImages/${gapGalleryProfiles[0].image}`)}`} alt={gapGalleryProfiles[0].image} />
+                        <li className={activeState.isActive1 ? "activeee" : ""}>
+                            <img src={gapGalleryProfiles[0].image} alt={gapGalleryProfiles[0].image} />
                         </li>
-                        <li className={activeState.isActive2 ? "active" : ""}>
-                            <img src={`${require(`../../../../common/profileImages/${gapGalleryProfiles[1].image}`)}`} alt={gapGalleryProfiles[1].image} />
+                        <li className={activeState.isActive2 ? "activeee" : ""}>
+                            <img src={gapGalleryProfiles[1].image} alt={gapGalleryProfiles[1].image} />
                         </li>
-                        <li className={activeState.isActive3 ? "active" : ""}>
-                            <img src={`${require(`../../../../common/profileImages/${gapGalleryProfiles[2].image}`)}`} alt={gapGalleryProfiles[2].image} />
+                        <li className={activeState.isActive3 ? "activeee" : ""}>
+                            <img src={gapGalleryProfiles[2].image} alt={gapGalleryProfiles[2].image} />
                         </li>
                     </ul>
                 </div>
                 <div className='t-content'>
                     <ul ref={(el) => (contentListRef = el)}>
-                        <li className={activeState.isActive1 ? "active" : ""}>
+                        <li className={activeState.isActive1 ? "activeeee" : ""}>
                             <div className="content-inner">
                                 <p className="quote">{gapGalleryProfiles[0].quote}</p>
                                 <h3 className="name">{gapGalleryProfiles[0].name}</h3>
                                 <h4 className="title">{gapGalleryProfiles[0].title}</h4>
                             </div>
                         </li>
-                        <li className={activeState.isActive2 ? "active" : ""}>
+                        <li className={activeState.isActive2 ? "activeee" : ""}>
                             <div className="content-inner">
                                 <p className="quote">{gapGalleryProfiles[1].quote}</p>
                                 <h3 className="name">{gapGalleryProfiles[1].name}</h3>
                                 <h4 className="title">{gapGalleryProfiles[1].title}</h4>
                             </div>
                         </li>
-                        <li className={activeState.isActive3 ? "active" : ""}>
+                        <li className={activeState.isActive3 ? "activeeee" : ""}>
                             <div className="content-inner">
                                 <p className="quote">{gapGalleryProfiles[2].quote}</p>
                                 <h3 className="name">{gapGalleryProfiles[2].name}</h3>
