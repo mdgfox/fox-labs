@@ -3,7 +3,6 @@ import { GsapGallery } from '../../Components/Galleries/gsap';
 
 const meta = {
     title: 'Kitsune/Galleries/GSAP Gallery',
-    tags: ['autodocs'],
     component: GsapGallery,
 } satisfies Meta<typeof GsapGallery>;
 
