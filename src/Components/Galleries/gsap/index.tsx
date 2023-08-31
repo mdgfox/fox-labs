@@ -3,8 +3,9 @@ import { gsap } from 'gsap';
 import { gapGalleryProfiles } from './data';
 import React from 'react';
 import './styles.scss';
-import ChevronRightIcon from '../../Breadcrumbs/ChevronRightIcon';
+import ArrowRightIcon from '../../Icons/ArrowRightIcon';
 import { fadeIn, fadeOut, scale, slideLeft, slideRight } from './gsapAnimations';
+import ArrowLeftIcon from '../../Icons/ArrowLeftIcon';
 
 export const GsapGallery: React.FC = () => {
     const [activeState, setActiveState] = useState({
@@ -99,7 +100,7 @@ export const GsapGallery: React.FC = () => {
     return (
         <div className='gallery-container'>
             <div onClick={prevSlide} className='arrows left'>
-                <ChevronRightIcon/>
+                <ArrowLeftIcon/>
             </div>
             <div className='inner'>
                 <div className='t-image'>
@@ -142,7 +143,7 @@ export const GsapGallery: React.FC = () => {
                 </div>
             </div>
             <div onClick={nextSlide} className='arrows right'>
-                <ChevronRightIcon/>
+                <ArrowRightIcon/>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import IconButtonWrapper from '../SocialPanel/IconButtonWrapper';
-import HomeIcon from './HomeIcon';
-import ChevronRightIcon from './ChevronRightIcon';
+import HomeIcon from '../Icons/HomeIcon';
+import ArrowRightIcon from '../Icons/ArrowRightIcon';
 import { Link } from '@mui/material';
 
 export const Breadcrumbs: React.FC<{location: Location}> = ({ location }) => {
@@ -12,7 +12,7 @@ export const Breadcrumbs: React.FC<{location: Location}> = ({ location }) => {
             const normalizedPathPart = pathPart.replace(/[#_\-.]/g, ' ');
             return (
                 <div key={'breadcrumbs-' + pathPart}>
-                    <ChevronRightIcon/>
+                    <ArrowRightIcon/>
                     <Link
                         sx={{ 'textTransform': 'capitalize', 'color': 'black', ':hover': { 'color': '#D6517C' } }}
                         component="button"

@@ -39,9 +39,6 @@ body {
       &.right {
         right: 0;
       }
-      &.left {
-        transform: rotate(180deg);
-      }
     }
     .inner {
       display: flex;

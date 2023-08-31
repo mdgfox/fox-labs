@@ -2,8 +2,8 @@ import { Canvas } from "@react-three/fiber";
 import { FC, useMemo, useRef, useState } from "react";
 import Frame from "./Frame";
 import Rig from "./Rig";
-import ChevronRightIcon from '../../Breadcrumbs/ChevronRightIcon';
 import { Gltf } from '@react-three/drei';
+import ArrowLeftIcon from '../../Icons/ArrowLeftIcon';
 
 export const DefaultRatio = 1.6;
 
@@ -18,7 +18,7 @@ export const PortalGallery: FC = () => {
 		return (
 			<div className="absolute z-10 left-4 top-8">
 				<button onClick={() => setSelectedItem(undefined)} className='flex items-center transition-colors duration-300 hover:text-light-button dark:hover:text-dark-button'>
-					<ChevronRightIcon style={{transform: 'rotate(180deg)'}} fontSize={'large'} /> Back
+					<ArrowLeftIcon fontSize={'large'} /> Back
 				</button>
 			</div>
 		);
