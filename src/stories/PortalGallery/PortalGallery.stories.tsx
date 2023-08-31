@@ -2,7 +2,7 @@ import { StoryObj, Meta } from '@storybook/react';
 import { PortalGallery } from '../../Components/Galleries/portal';
 
 const meta = {
-    title: 'Kitsune/Galleries/Portal Gallery',
+    title: 'Kitsune/Galleries/ThreeJS/Portal Gallery',
     component: PortalGallery,
 } satisfies Meta<typeof PortalGallery>;
 
