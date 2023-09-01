@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react';
-import { HorizontalLoader } from '../Components/Loaders/HorizontalLoader';
+import { HorizontalLoader } from '../Components/Loaders/horizontal/HorizontalLoader';
 const meta = {
     title: 'Kitsune/Loaders/Horizontal Loader',
     component: HorizontalLoader,

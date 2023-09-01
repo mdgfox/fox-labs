@@ -1,6 +1,6 @@
-import './index.scss';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import './index.scss'
 export const HorizontalLoader = () => {
     const [timeline, setTimeline] = useState<GSAPTimeline>();
     const containerRef = useRef<HTMLDivElement>(null);
@@ -28,7 +28,7 @@ export const HorizontalLoader = () => {
     }, [repeat, timeline]);
 
     return (
-        <div ref={containerRef} className={'root'}>
+        <div ref={containerRef} className={'rootHorizontal'}>
             <div ref={squareRef} className={'square'}></div>
         </div>
     );
