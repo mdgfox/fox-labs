@@ -18,7 +18,7 @@ export const BurgerGallery: FC = () => {
                 </article>
             );
         });
-    }, [burgerGalleryItems]);
+    }, []);
     return (
         <span className="grid place-items-center">
             <section className="flex flex-wrap justify-center gap-4 w-full max-w-2xl">
