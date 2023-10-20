@@ -1,0 +1,159 @@
+/* disable tailwind */
+.off-tailwind {
+    all: unset;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+:root {
+    --bg: hsl(0 0% 0%);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: hsl(0 0% 14%);
+}
+
+@property --angle {
+    inherits: true;
+    initial-value: 0deg;
+    syntax: '<angle>';
+}
+
+section {
+    --angle: 0;
+    animation: rotate-gradient 3s infinite linear;
+    animation-play-state: paused;
+}
+
+section:hover {
+    animation-play-state: running;
+}
+
+article:last-of-type:hover {
+    --alpha: 0;
+}
+
+section {
+    --gradient: conic-gradient(from calc(180deg + var(--angle)) at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
+}
+
+@keyframes rotate-gradient {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+article {
+    color: hsl(0 0% 92%);
+    background:
+            linear-gradient(var(--bg), var(--bg)) padding-box,
+            var(--gradient) border-box;
+    border: 8px solid transparent;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 26ch;
+    aspect-ratio: 4 / 3;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    transition: background 0.2s;
+}
+article:not(.faux) { z-index: 2; }
+
+p {
+    text-align: left;
+    margin: 0;
+}
+
+article:not(.faux)::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 12px;
+    background: hsl(0 0% 0%);
+    opacity: var(--alpha, 0.5);
+    transition: opacity 0.2s;
+}
+
+/* Explosion */
+
+[data-exploded] section {
+    transition: transform 1s;
+}
+
+.faux {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--gradient) border-box;
+}
+
+[data-exploded] section {
+    transform: rotateX(60deg) rotate(25deg);
+}
+
+[data-imploding] article:not(.faux),
+[data-exploded] article:not(.faux) {
+    background: var(--bg) padding-box;
+}
+
+[data-exploded] article:not(.faux) p {
+    transform: translate3d(0, 0, 200px);
+}
+
+[data-exploded] .faux {
+    transform: translate3d(0, 0, -200px);
+}
+[data-exploded] .faux,
+[data-exploded] article:not(.faux) p {
+    transition: transform 1s 1.5s;
+}
+
+[data-exploded] label {
+    opacity: 1;
+    transition: 1s 1.5s;
+}
+
+label {
+    transition: 1s 0s;
+}
+
+section {
+    transition: transform 1s 1.5s;
+}
+
+article:not(.faux) p, .faux {
+    transition: transform 1s 0s;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 2rem);
+    white-space: nowrap;
+    color: hsl(0 0% 70%);
+    font-size: 1.5rem;
+    translate: 0 -50%;
+    opacity: 0;
+    transform: translate3d(0, 0, calc(var(--z, 0) * 1px));
+}
+
+label:nth-of-type(1) {
+    --z: 200;
+}
+label:nth-of-type(3) {
+    --z: -200;
+}
