@@ -1,31 +1,27 @@
-# kitsune-material
+# Fox Labs
 
-> Simple sandbox playground for react components
+> Simple playground for React, JS, GSAP, CSS, etc. labs
 
-[![NPM](https://img.shields.io/npm/v/kitsune-material.svg)](https://www.npmjs.com/package/kitsune-material) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
+## Build Storybook
 
 ```bash
-npm install --save kitsune-material
+yarn build-storybook
 ```
 
-## Usage
+## Run Storybook
 
-```tsx
-import React, { Component } from 'react'
-
-import FooterFire from 'kitsune-material'
-import 'kitsune-material/dist/index.css'
-
-class Example extends Component {
-  render() {
-      return (
-          <FooterFire>Footer Content</FooterFire>
-      );
-  }
-}
+```bash
+yarn storybook
 ```
+
+Please, use yarn for this repository.
+
+## Workflow
+
+1. Add(edit) component in src\Components folder
+2. Add(update) story in src\stories folder
+3. Commit changes
+4. Create PR to main branch
 
 ## JS functions performance test
 ```js
@@ -38,6 +34,9 @@ console.log(() => {
 console.timeEnd('endTime');
 ```
 
+## Contacts
+[GitHub Page](https://github.com/mdgfox)
+
 ## License
 
-MIT © [mdgfox](https://github.com/mdgfox)
+MIT © 
